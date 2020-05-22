@@ -2,8 +2,10 @@
 import React, { Component } from 'react';
 
 // Components
-import Flat from '../components/Flat/Flat';
 import FlatList from '../components/FlatList/FlatList';
+
+// Content
+import FLAT_DATA from '../../assets/flatsData'
 
 // Styles
 import '../../assets/stylesheets/application.scss';
@@ -14,7 +16,7 @@ class App extends Component {
     super(props);
 
     this.state = {
-
+      flats: [FLAT_DATA]
     };
   }
 
@@ -22,14 +24,7 @@ class App extends Component {
     return (
       <div className="App">
         <div className="left-side">
-          <div className="flat-list">
-            <Flat />
-            <Flat />
-            <Flat />
-            <Flat />
-            <Flat />
-            <Flat />
-          </div>
+            <FlatList />
         </div>
       </div>
     );

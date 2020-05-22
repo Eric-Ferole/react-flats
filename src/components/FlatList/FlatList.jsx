@@ -1,24 +1,22 @@
 // Libs
 import React, { Component } from 'react';
 
-// Content
-import FLAT_DATA from "../../../assets/flatsData";
+// Components
+import Flat from '../Flat/Flat';
 
+// // Content
+// import FLAT_DATA from "../../../assets/flatsData";
 
 class FlatList extends Component {
-    constructor(props) {
-        super(props)
 
-        this.state = {
-
-        }
-    }
     render() {
         return (
-            <div className="flat-list"></div>
+            <div className="flat-list">
+                    {this.state.flats.map((flat, index) => <Flat key={index} imageUrl={flat.imageUrl} name={flat.name} price={flat.price} priceCurrency={flat.priceCurrency}/>)}
+            </div>
         )
     }
     
 }
 
-export default FlatList;
+export default FlatList;                
