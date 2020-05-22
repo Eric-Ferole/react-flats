@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 // Styles
-import '../../../assets/stylesheets/application.scss';
+// import '../../../assets/stylesheets/application.scss';
 
 class Flat extends Component {
 
@@ -17,8 +17,8 @@ class Flat extends Component {
 
         return (
             <div className="flat">
-                <p className="price">160$</p>
-                <p className="flat-name">Super Condo de feu</p>
+                <p className="flat flat__price">160$</p>
+                <p className="flat__name">Super Condo de feu</p>
                 <img src={url} alt=""/>
             </div>
         )

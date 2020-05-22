@@ -20,10 +20,17 @@ class App extends Component {
 
   render() {
     return (
-      <div>
-        <p>Bonsoir Bonsoir</p>
-        <Flat />
-        <FlatList />
+      <div className="App">
+        <div className="left-side">
+          <div className="flat-list">
+            <Flat />
+            <Flat />
+            <Flat />
+            <Flat />
+            <Flat />
+            <Flat />
+          </div>
+        </div>
       </div>
     );
   }

@@ -1,3 +1,7 @@
+* {
+  border: solid 1px red;
+}
+
 body {
   font-family: Helvetica;
 }
@@ -10,28 +14,44 @@ body {
 }
 
 .App {
-  background-color: #dddddd;
+  background-color: #c2c2c2;
   display: flex;
+  width: 100%;
 }
 
 .left-side {
-}
+  flex: 0 0 40%;
+  overflow: scroll;
 
-.flat-list {
-  
-}
+  .flat-list {
+    column-count: 2;
+    column-gap: 5px;
+    padding: 5px;
+  }
 
-.flat {
-  border: color red 2px solid;
-  width: 200px;
+  .flat {
+    border: color red 2px solid;
+    img {
+      width: 100%;
+      z-index: 1;
+    } 
+    &__price {
+      color: red;
+      font-weight: bold;
+      position: relative;
+      left: 20px;
+      top: -50px;
+      z-index: 2;
+    }
+
+    &__name {
+      color: #fff;
+      font-weight: bold;
+    }
+  }
 }    
 
 .right-side {
-
+  width: 60%;
+  background-color: rgb(193, 75, 75);
 }
-
-
-.price {
-    position: absolute;
-}
-
