@@ -22,7 +22,7 @@ body {
 
 .left-side {
   background-color: #fff;
-  flex: 0 0 40%;
+  flex: 0 0 60%;
   overflow: scroll;
 
   .flat-list {
@@ -34,17 +34,27 @@ body {
   .flat {
     margin: 0 0 5px 0;
     position: relative;
+    
     img {
       width: 100%;
-    } 
+    }  
 
-    ::before {
+    &::before {
       content: "";
       background-color: #000;
-      top: 0;
-      left: 0;  
+      position: absolute;
       height: 100%;
       width: 100%;
+      opacity: 0.5;
+      transition: 0.3s;
+    }
+
+    &:hover::before {
+      display: none;
+    }
+
+    &:hover p {
+      display: none;
     }
 
     &__price {
@@ -60,7 +70,7 @@ body {
       margin: 0;
       position: absolute;
       color: #fff;
-      font-size: 16px;
+      font-size: 20px;
       left: 20px;
       bottom: 20px;
       font-weight: bold;
@@ -69,5 +79,5 @@ body {
 }    
 
 .right-side {
-  width: 60%;
+  width: 40%;
 }

@@ -2,13 +2,13 @@ import React, { Component } from 'react';
 
 class Flat extends Component {
 
-    render() {
+render() {
 
         return (
             <div className="flat">
-                <p className="flat flat__price">{this.props.price} {this.props.priceCurrency}</p>
-                <p className="flat flat__name">{this.props.name}</p>
-                <img src={this.props.imageUrl} alt=""/>
+                <p className="flat__price">{this.props.price} {this.props.priceCurrency}</p>
+                <p className="flat__name">{this.props.name}</p>
+                <a href="/"><img src={this.props.imageUrl} alt=""/></a>
             </div>
         )
     }
