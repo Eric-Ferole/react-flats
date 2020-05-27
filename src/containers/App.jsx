@@ -16,7 +16,7 @@ import '../../assets/stylesheets/application.scss';
 
 class App extends Component {
   constructor(props) {
-    super(props);
+    super(props);  
 
     this.state = {
       flats: FLAT_DATA
@@ -30,7 +30,7 @@ class App extends Component {
           <FlatList flats={this.state.flats} />
         </div>
         <div className="right-side">
-          <SimpleMap />
+          <SimpleMap flats={this.state.flats} />
         </div>
       </div>
     );
