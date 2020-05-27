@@ -4,6 +4,10 @@ import GoogleMapReact from "google-map-react";
 // API KEY
 import API_KEY from "../../../../../API/googleMapAPIKEY";
 
+// Components
+import Marker from "../Marker/Marker";
+
+
 const AnyReactComponent = ({ text }) => <div>{text}</div>;
 
 // eslint-disable-next-line react/prefer-stateless-function
@@ -28,7 +32,7 @@ class SimpleMap extends Component {
         >
           {
             this.props.flats.map(flat => {
-              return <AnyReactComponent lat={flat.lat} lng={flat.lng} text="My Marker" />
+              return <Marker lat={flat.lat} lng={flat.lng} id={flat.id} text="My Marker" />
             })
           }
         </GoogleMapReact>
