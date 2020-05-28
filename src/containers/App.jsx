@@ -19,9 +19,11 @@ class App extends Component {
     super(props);  
 
     this.state = {
-      flats: FLAT_DATA
+      flats: FLAT_DATA,
+      // currentFlat:
     };
   }
+
 
   render() {
     return (

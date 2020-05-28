@@ -21,13 +21,25 @@ class SimpleMap extends Component {
     zoom: 13,
   };
 
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      center: {
+        lat: 48.8534,
+        lng: 2.3488
+      },
+      zoom: 13
+    }
+  }
+
   render() {
-    console.log("FUCK FUCK", CLE)
     return (
       // Important! Always set the container height explicitly
       <div style={{ height: "100vh", width: "100%" }}>
         <GoogleMapReact
           bootstrapURLKeys={ { key: CLE } }
+          center={this.state.center}
           defaultCenter={this.props.center}
           defaultZoom={this.props.zoom}
         >
