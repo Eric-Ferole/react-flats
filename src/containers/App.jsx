@@ -2,17 +2,15 @@
 import React, { Component } from 'react';
 // import GoogleMapReact from 'google-map-react';
 
-
 // Components
 import FlatList from '../components/FlatList/FlatList';
-import SimpleMap from '../components/MyGoogleMap/MyGoogleMap';
+import SimpleMap from '../components/SimpleMap/SimpleMap';
 
 // Content
 import FLAT_DATA from '../../assets/flatsData'
 
 // Styles
 import '../../assets/stylesheets/application.scss';
-
 
 class App extends Component {
   constructor(props) {
@@ -23,7 +21,6 @@ class App extends Component {
       // currentFlat:
     };
   }
-
 
   render() {
     return (

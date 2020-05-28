@@ -7,13 +7,14 @@ class Flat extends Component {
   };
 
   render() {
+    const flatPrice = `${this.props.price} ${this.props.priceCurrency}`
     return (
       <div className="flat">
         <p className="flat__price">
-          {this.props.price} {this.props.priceCurrency}
+          {flatPrice}
         </p>
         <p className="flat__name">{this.props.name}</p>
-        <div href="/" onClick={this.handleClick}>
+        <div onClick={this.handleClick}>
           <img src={this.props.imageUrl} alt="" />
         </div>
       </div>
